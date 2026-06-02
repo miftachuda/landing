@@ -263,6 +263,39 @@
       gap: 18px;
     }
 
+    .slider {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: var(--shadow);
+    }
+
+    .slider-track {
+      display: flex;
+      width: 300%;
+      animation: slide 15s infinite;
+    }
+
+    .slide {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    .slide img {
+      display: block;
+      width: 100%;
+      height: min(62vw, 520px);
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%, 26% { transform: translateX(0); }
+      33%, 59% { transform: translateX(-100%); }
+      66%, 92% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
     .card {
       padding: 24px;
       border: 1px solid var(--line);
@@ -420,6 +453,20 @@
       </div>
     </section>
 
+    <section class="container" id="photos">
+      <div class="section-head">
+        <h2>See Zoyi equipment in action.</h2>
+        <p>Workshop photos and repair equipment visuals from the current collection.</p>
+      </div>
+      <div class="slider" aria-label="Sliding equipment photos">
+        <div class="slider-track">
+          <div class="slide"><img src="12731707234_285312698.jpg" alt="Zoyi repair equipment photo 1"></div>
+          <div class="slide"><img src="12715770956_285312698.jpg" alt="Zoyi repair equipment photo 2"></div>
+          <div class="slide"><img src="12731695606_285312698.jpg" alt="Zoyi repair equipment photo 3"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="container" id="equipment">
       <div class="section-head">
         <h2>Equipment for clean diagnosis and confident fixes.</h2>
@@ -450,7 +497,7 @@
           <h2>Start your next repair with Zoyi.</h2>
           <p>Need service or equipment recommendations? Contact Zoyi and get the right tools for the job.</p>
         </div>
-        <a class="btn btn-primary" href="mailto:hello@zoyi.example">hello@zoyi.example</a>
+        <a class="btn btn-primary" href="mailto:zoyi@mniftachuda.my.id">zoyi@mniftachuda.my.id</a>
       </div>
     </section>
   </main>
